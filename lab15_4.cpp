@@ -17,3 +17,12 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int p[4] = {a,b,c,d};
+	for(int i = 0 ; i < 2 ; i++){
+		int x = rand()%4,y = rand()%4;
+		swap(p[x],p[y]);
+	}
+	a = p[0] ; b = p[1] ; c = p[2] ; d = p[3];
+}
